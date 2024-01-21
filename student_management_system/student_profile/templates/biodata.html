@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Biodata</title>
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #F4F4F4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Biodata</h2>
+        {% if first_name %}
+            <p><strong>First Name:</strong> {{ first_name }}</p>
+        {% endif %}
+        {% if last_name %}
+            <p><strong>Last Name:</strong> {{ last_name }}</p>
+        {% endif %}
+        {% if dob %}
+            <p><strong>Date of Birth:</strong> {{ dob }}</p>
+        {% endif %}
+        {% if photo %}
+            <p><strong>Student Photo:</strong> {{ photo }}</p>
+        {% endif %}
+        {% if resume %}
+            <p><strong>Resume:</strong> {{ resume }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
